@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Moj MVC test</title>
+
+    <link href="style.css" rel="stylesheet">
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/bootstrap-theme.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" />
+
+    <script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+    <script src="@Url.Content("~/scripts/bootstrap.min.js")"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"><h1>MVC test</h1></div>
+        <div id="nav">
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Domov</a></li>
+                <li><a href="@Url.Action("Prva", "Home")">Prvá</a></li>
+                <li><a href="@Url.Action("Druha", "Home")">Druhá</a></li>
+                <li><a href="@Url.Action("Tretia", "Home")">Tretia</a></li>
+                <li><a href="@Url.Action("Stvrta", "Home")">Štvrtá</a></li>
+            </ul>
+        </div>
+        <div id="main" style="background-color: #b5b5b5">
+
+            @RenderBody()
+
+        </div>
+        <div id="sidebar">
+            <h2>Sidebar</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris vel magna.</p>
+            <ul>
+                <li><a href="/">Link 1</a></li>
+                <li><a href="/">Link 2</a></li>
+                <li><a href="/">Link 3</a></li>
+                <li><a href="/">Link 4</a></li>
+                <li><a href="/">Link 5</a></li>
+                <li><a href="/">Link 6</a></li>
+                <li><a href="/">Link 7</a></li>
+                <li><a href="/">Link 8</a></li>
+                <li><a href="/">Link 9</a></li>
+                <li><a href="/">Link 10</a></li>
+                <li><a href="/">Link 11</a></li>
+                <li><a href="/">Link 12</a></li>
+                <li><a href="/">Link 13</a></li>
+                <li><a href="/">Link 14</a></li>
+                <li><a href="/">Link 15</a></li>
+            </ul>
+
+            @RenderSection("Sidebar", false)
+
+        </div>
+        <div id="footer">
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+</html>
