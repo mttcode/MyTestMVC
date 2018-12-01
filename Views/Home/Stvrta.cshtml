@@ -1,0 +1,23 @@
+@using mojeMVC.Models;
+
+<h3>Štvrtá stránka</h3>
+
+<table class="table table-bordered table-hover table-condensed table-responsive">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Názov</th>
+            <th>Autor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Book b in ((List<Book>)ViewBag.ZoznamKnih))
+        {
+            <tr>
+                <td>@b.Id</td>
+                <td>@b.Name</td>
+                <td>@b.Author</td>
+            </tr>
+        }
+    </tbody>
+</table>
