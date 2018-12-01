@@ -1,0 +1,28 @@
+@using mojeMVC.Models;
+
+<h3>Tretia stránka</h3>
+
+<h4>Výpis kníh</h4>
+
+@foreach (var b in Model)
+{
+    <p>Id: @b.Id</p>
+    <p>Názov: @b.Name</p>
+    <p>Autor: @b.Author</p>
+}
+
+<p>Dátum: @ViewBag.Datum</p>
+<br />
+<button type="button" class="btn btn-sm btn-default" onclick="ButtonClick()">Zmena farby pozadia</button>
+
+<script type="text/javascript">
+
+    function ButtonClick()
+    {
+            $("div").css({ "background-color": "blue" });
+            $(document).ready(function () {
+                $("p").css({ "color": "#000" });
+            });
+    }
+
+</script>
