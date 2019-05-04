@@ -15,7 +15,7 @@ namespace myMVC.Controllers
         {
             string myString = "string";
 
-            ViewBag.Retazec = myString;
+            ViewBag.myString = myString;
 
             return View();
         }
