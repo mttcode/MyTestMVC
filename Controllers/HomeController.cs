@@ -7,52 +7,52 @@ using System.Data;
 using System.Data.SqlClient;
 using mojeMVC.Models;
 
-namespace mojeMVC.Controllers
+namespace myMVC.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            string retazec = "retazec";
+            string myString = "string";
 
-            ViewBag.Retazec = retazec;
+            ViewBag.Retazec = myString;
 
             return View();
         }
 
-        public ActionResult Prva()
+        public ActionResult First()
         {
             return View();
         }
 
-        public ActionResult Druha()
+        public ActionResult Second()
         {
-            string pozdrav = "Ahoj";
-            int cislo = 17;
+            string greeting = "Hello";
+            int number = 17;
 
-            ViewBag.Pozdrav = pozdrav;
-            ViewBag.Cislo = cislo;
+            ViewBag.Greeting = greeting;
+            ViewBag.Number = number;
 
             return View();
         }
 
-        public ActionResult Tretia(int id = 2)
+        public ActionResult Third(int id = 2)
         {
             var b = from Book book
                     in Book.GetBooks()
                     where book.Id == id
                     select book;
 
-            ViewBag.Datum = DateTime.Now;
+            ViewBag.Date = DateTime.Now;
 
             return View(b);
         }
 
-        public ActionResult Stvrta()
+        public ActionResult Fourth()
         {
-            List<Book> zoznamKnih = Book.GetBooks();
+            List<Book> ListBooks = Book.GetBooks();
 
-            ViewBag.ZoznamKnih = zoznamKnih;
+            ViewBag.ListBooks = ListBooks;
 
             return View();
         }
