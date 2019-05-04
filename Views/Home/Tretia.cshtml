@@ -1,8 +1,8 @@
-@using mojeMVC.Models;
+@using myMVC.Models;
 
-<h3>Tretia stránka</h3>
+<h3>Third pagea</h3>
 
-<h4>Výpis kníh</h4>
+<h4>List books</h4>
 
 @foreach (var b in Model)
 {
@@ -11,9 +11,9 @@
     <p>Autor: @b.Author</p>
 }
 
-<p>Dátum: @ViewBag.Datum</p>
+<p>Dátum: @ViewBag.Date</p>
 <br />
-<button type="button" class="btn btn-sm btn-default" onclick="ButtonClick()">Zmena farby pozadia</button>
+<button type="button" class="btn btn-sm btn-default" onclick="ButtonClick()">Change background color</button>
 
 <script type="text/javascript">
 
