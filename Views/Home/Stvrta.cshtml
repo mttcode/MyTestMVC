@@ -1,17 +1,17 @@
-@using mojeMVC.Models;
+@using myMVC.Models;
 
-<h3>Štvrtá stránka</h3>
+<h3>Fourth page</h3>
 
 <table class="table table-bordered table-hover table-condensed table-responsive">
     <thead>
         <tr>
             <th>Id</th>
-            <th>Názov</th>
-            <th>Autor</th>
+            <th>Name</th>
+            <th>Author</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (Book b in ((List<Book>)ViewBag.ZoznamKnih))
+        @foreach (Book b in ((List<Book>)ViewBag.ListBooks))
         {
             <tr>
                 <td>@b.Id</td>
