@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace mojeMVC.Models
+namespace myMVC.Models
 {
     public class Book
     {
@@ -14,9 +14,9 @@ namespace mojeMVC.Models
         public static List<Book> GetBooks()
         {
             List<Book> books = new List<Book>();
-            books.Add(new Book() { Id = 1, Name = "Nazov_1", Author = "Autor_1" });
-            books.Add(new Book() { Id = 2, Name = "Nazov_2", Author = "Autor_2" });
-            books.Add(new Book() { Id = 3, Name = "Nazov_3", Author = "Autor_3" });
+            books.Add(new Book() { Id = 1, Name = "Name_1", Author = "Author_1" });
+            books.Add(new Book() { Id = 2, Name = "Name_2", Author = "Author_2" });
+            books.Add(new Book() { Id = 3, Name = "Name_3", Author = "Author_3" });
 
             return books;
         }
